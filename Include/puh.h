@@ -3,8 +3,15 @@
 #define STU_MAX 1000  //学生的最大数量
 #define COU_MAX 100 //课程的最大数量
 #define STU_COU 5 //学生选课的最大数
-#define COU_STU 10 //课程最多的学生人数
 using namespace std;
+
+/*课程结构体*/
+struct course{
+    int id; //课程id
+    string name; //课程名称
+    int cou_stu_num; //选择该门课程的学生人数
+    int maxNum; //该课程最多选择的人数
+};
 
 /*学生结构体*/
 struct student{
@@ -16,13 +23,6 @@ struct student{
     int stu_cou_num; //学生所选课程的数量
 };
 
-/*课程结构体*/
-struct course{
-    int id; //课程id
-    string name; //课程名称
-    int cou_stu_num; //选择该门课程的学生人数
-    struct student cou_stu[COU_STU]; //选择该门课程的学生
-};
 
 void homeShow(); //主菜单
 
